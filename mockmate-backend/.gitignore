@@ -1,2 +1,34 @@
-node_modules
+# Node modules
+node_modules/
+node_modules/**
+
+# Environment variables
 .env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build artifacts
+dist/
+build/
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+
+# Cache files
+.cache/
+.tmp/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db

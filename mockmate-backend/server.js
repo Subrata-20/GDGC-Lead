@@ -8,7 +8,12 @@ import questionRouter from "./routes/question.route.js";
 const app = express();
 
 dotenv.config();
-app.use(cors());
+
+app.use(cors({
+    origin: 'http://localhost:5173',  // Allow only your frontend
+    credentials: true,  // Allow credentials (cookies, authentication headers)
+}));
+
 app.use(cookieParser());
 app.use(express.json());
 app.use(urlencoded({ extended: true }));

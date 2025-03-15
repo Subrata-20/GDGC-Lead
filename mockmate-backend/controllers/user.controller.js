@@ -63,14 +63,40 @@ export const login = async (req, res) => {
   }
 };
 
+export const logout = async (req, res) => {
+  res
+    .status(200)
+    .cookie("token", "", {
+      expires: new Date(0), // Clears the cookie immediately
+      httpOnly: true,
+      sameSite: "Lax", // Required if using cross-origin cookies
+    })
+    .json({
+      success: true,
+      message: "User Logged Out Successfully",
+    });
+};
 
+export const getUser = async (req, res) => {
+  try {
+    const userId = req.user?.id;
+    if (!userId) {
+      return res.status(401).json({
+        success: false,
+        message: "Unauthorized access. Please log in first.",
+      });
+    }
 
-export const logout = async (req,res)=> {
-  res.status(200).cookie("token", "",{
-    expires: new Date(Date.now()),
-    httpOnly: true,
-  }).json({
-    success: true,
-    message: "User Logged Out Successfully"
-  })
-}
+    const user = await User.find({ _id: userId });
+    return res.status(200).json({
+      success: true,
+      user: user,
+    });
+  } catch (error) {
+    console.error("Error in user getUser controller: ", error);
+    res.status(500).json({
+      success: false,
+      message: "Internal Server Error. Please try again later.",
+    });
+  }
+};

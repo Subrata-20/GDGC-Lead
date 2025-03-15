@@ -1,18 +1,6 @@
 import mongoose from "mongoose";
 
-// const questionSchema = new mongoose.Schema({
-//   question: { type: String, required: true },
-//   options: [
-//     {
-//       key: { type: String, required: true }, // Option key (a, b, c, d)
-//       value: { type: String, required: true }, // Option value (text)
-//     },
-//   ],
-//   answer: {
-//     key: { type: String, required: true }, // Correct answer key
-//     value: { type: String, required: true }, // Correct answer value
-//   },
-// });
+
 
 const questionSetSchema = new mongoose.Schema(
   {
@@ -33,11 +21,3 @@ const questionSetSchema = new mongoose.Schema(
 
 export const QuestionSet = mongoose.model("QuestionSet", questionSetSchema);
 
-
-// const newQuestionSet = new QuestionSet({
-//   user: userId,
-//   topic,
-//   difficulty,
-//   questions: questionArray,
-// });
-// await newQuestionSet.save();

@@ -1,4 +1,3 @@
-import axios from "axios";
 import { QuestionSet } from "../models/questionSchema.js";
 import dotenv from "dotenv";
 import { GoogleGenerativeAI } from "@google/generative-ai";

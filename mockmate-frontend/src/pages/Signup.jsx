@@ -20,7 +20,7 @@ const Signup = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:5002/api/v1/user/signup",
+        "https://gdgc-lead-3.onrender.com/api/v1/user/signup",
         { username, email, password },
         {
           withCredentials: true,

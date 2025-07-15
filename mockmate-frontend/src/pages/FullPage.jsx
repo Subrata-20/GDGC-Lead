@@ -31,7 +31,7 @@ const FullPage = ({ data }) => {
     const fetchResult = async () => {
       try {
         const res = await axios.post(
-          "http://localhost:5002/api/v1/question/get-result",
+          "https://gdgc-lead-3.onrender.com/api/v1/question/get-result",
           { qnId },
           {
             withCredentials: true,

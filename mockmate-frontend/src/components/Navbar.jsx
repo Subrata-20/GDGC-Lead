@@ -18,7 +18,7 @@ const Navbar = () => {
         return;
       }
 
-      await axios.get("http://localhost:5002/api/v1/user/logout", {
+      await axios.get("https://gdgc-lead-3.onrender.com/api/v1/user/logout", {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",

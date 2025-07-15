@@ -13,7 +13,7 @@ const Profile = () => {
     const fetchHistory = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5002/api/v1/question/getHistory",
+          "https://gdgc-lead-3.onrender.com/api/v1/question/getHistory",
           {
             withCredentials: true,
             headers: { "Content-Type": "application/json" },

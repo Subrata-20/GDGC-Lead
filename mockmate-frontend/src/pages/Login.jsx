@@ -16,7 +16,7 @@ const Login = () => {
     }
     try {
       const res = await axios.post(
-        "http://localhost:5002/api/v1/user/login",
+        "https://gdgc-lead-3.onrender.com/api/v1/user/login",
         { email, password },
         {
           withCredentials: true,

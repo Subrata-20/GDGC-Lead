@@ -32,7 +32,7 @@ function App() {
       setIsAuthenticated(true);
       const fetchUser = async () => {
         const res = await axios.get(
-          "https://gdgc-lead-subratas-projects-8ba29825.vercel.app/api/v1/user/getUser",
+          "https://gdgc-lead-3.onrender.com/api/v1/user/getUser",
           {
             withCredentials: true,
           }

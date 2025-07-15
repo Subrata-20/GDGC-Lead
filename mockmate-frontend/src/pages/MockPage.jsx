@@ -28,7 +28,7 @@ const MockPage = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5002/api/v1/question/generate-qn",
+        "https://gdgc-lead-3.onrender.com/api/v1/question/generate-qn",
         { topic, difficulty },
         {
           withCredentials: true,

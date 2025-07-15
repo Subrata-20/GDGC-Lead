@@ -70,7 +70,7 @@ const QuizPage = ({ questions, testId }) => {
       // Send data to backend
       try {
         const response = await axios.post(
-          "http://localhost:5002/api/v1/question/store-result", // Update with your backend URL
+          "https://gdgc-lead-3.onrender.com/api/v1/question/store-result", // Update with your backend URL
           {
             correctans: correctAnswers,
             questionId: testId,

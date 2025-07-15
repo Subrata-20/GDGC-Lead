@@ -10,7 +10,7 @@ const app = express();
 dotenv.config();
 
 app.use(cors({
-    origin: 'http://localhost:5173',  // Allow only your frontend
+    origin: 'https://gdgc-lead-3.onrender.com',  // Allow only your frontend
     credentials: true,  // Allow credentials (cookies, authentication headers)
 }));
 
